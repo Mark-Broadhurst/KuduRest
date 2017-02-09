@@ -1,0 +1,20 @@
+version: 1.0.{build}
+
+branches:
+  except:
+    - gh-pages
+
+skip_tags: true
+
+install:
+  - .paket\paket.bootstrapper.exe
+  - .paket\paket.exe restore
+
+configuration: Release
+
+cache:
+  - packages -> paket.lock
+
+build:
+  parallel: true
+  project: Fake.KuduRestApi.sln
