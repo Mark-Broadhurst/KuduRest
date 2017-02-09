@@ -6,10 +6,6 @@ branches:
 
 skip_tags: true
 
-install:
-  - .paket\paket.bootstrapper.exe
-  - .paket\paket.exe restore
-
 configuration: Release
 
 cache:
