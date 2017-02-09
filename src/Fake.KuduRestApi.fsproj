@@ -46,7 +46,6 @@
   <ItemGroup>
     <Compile Include="AssemblyInfo.fs" />
     <Compile Include="Http.fs" />
-    <Compile Include="RelUrl.fs" />
     <Compile Include="KuduRest.fs" />
   </ItemGroup>
   <PropertyGroup>
