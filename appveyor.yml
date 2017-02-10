@@ -13,4 +13,4 @@ cache:
 
 build:
   parallel: true
-  project: Fake.KuduRestApi.sln
+  project: KuduRest.sln
