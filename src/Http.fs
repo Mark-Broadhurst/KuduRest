@@ -1,4 +1,4 @@
-﻿module Fake.Azure.KuduRest.Http
+﻿module KuduRest.Http
 
 open System
 open System.Text

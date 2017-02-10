@@ -1,4 +1,4 @@
-﻿namespace Fake.Azure
+﻿namespace KuduRest
 
 open Fake.Azure.KuduRest
 
