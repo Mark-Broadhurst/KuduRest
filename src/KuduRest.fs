@@ -1,7 +1,5 @@
 ﻿namespace KuduRest
 
-open Fake.Azure.KuduRest
-
 type KuduRestClient (siteName:string, username:string, password:string) =
     
     let baseUrl = sprintf "https://%s.scm.azurewebsites.net" siteName
