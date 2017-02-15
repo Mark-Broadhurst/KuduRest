@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>KuduRest</id>
+    <version>1.0.0</version>
+    <title>KuduRest</title>
+    <authors>Mark Broadhurst</authors>
+    <owners>Mark Broadhurst</owners>
+    <licenseUrl>https://raw.githubusercontent.com/Mark-Broadhurst/KuduRest/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/Mark-Broadhurst/KuduRest</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>An implementation of the Kudu Rest API</description>
+    <releaseNotes>Inital Release</releaseNotes>
+    <copyright>Copyright 2017</copyright>
+    <tags>Kudu Azure Deployment</tags>
+  </metadata>
+</package>
