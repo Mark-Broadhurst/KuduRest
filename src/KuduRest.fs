@@ -15,7 +15,7 @@ type KuduRestClient (siteName:string, username:string, password:string) =
         |> unpackResponse streamToString
     member __.ScmDelete () = 
         client.Delete (sprintf "%s/api/scm" baseUrl)
-        |> unpackResponse streamToString
+        |> unpackNoResponse
     member __.Command command dir = 
         client.Post (sprintf "%s/api/command" baseUrl) (sprintf """{ "command": "%s", "dir": "%s" }""" command dir)
         |> unpackResponse streamToString

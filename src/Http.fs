@@ -27,6 +27,14 @@ let unpackResponse (unpack: Stream -> 'A) (response:WebResponse) =
     then Choice1Of2(unpack stream)
     else Choice2Of2(httpResponse.StatusCode.ToString(), streamToString stream)
 
+let unpackNoResponse (response:WebResponse) =
+    let httpResponse = response :?> HttpWebResponse
+    let stream = httpResponse.GetResponseStream()
+    if httpResponse.StatusCode = HttpStatusCode.NoContent
+    then Choice1Of2("")
+    else Choice2Of2(httpResponse.StatusCode.ToString(), streamToString stream)
+    
+
 let private httpAction token (verb:string) (url:string) =
     let request = WebRequest.CreateHttp(url)
     request.Headers.Add("Authorization", token)
@@ -40,7 +48,10 @@ let private httpActionWithBody token (verb:string) (url:string) (content:string)
     let stream = request.GetRequestStream()
     let bytes = Encoding.ASCII.GetBytes(content)
     stream.Write(bytes,0,bytes.Length)
-    request.GetResponse()
+    try
+        request.GetResponse()
+    with 
+    | :? WebException as ex -> ex.Response
 
 let private httpActionBinary token (verb:string) (url:string) (bytes:byte[]) =
     let request = WebRequest.CreateHttp(url);
@@ -48,7 +59,10 @@ let private httpActionBinary token (verb:string) (url:string) (bytes:byte[]) =
     request.Method <- verb
     let stream = request.GetRequestStream()
     stream.Write(bytes,0,bytes.Length)
-    request.GetResponse()
+    try
+        request.GetResponse()
+    with 
+    | :? WebException as ex -> ex.Response
 
 type RestClient(username, password) =
     let token = CreateToken username password
