@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>KuduRest</id>
-    <version>1.0.0</version>
+    <version>$version$</version>
     <title>KuduRest</title>
     <authors>Mark Broadhurst</authors>
     <owners>Mark Broadhurst</owners>
