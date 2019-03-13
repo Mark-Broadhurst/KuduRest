@@ -1,22 +1,53 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
-MinimumVisualStudioVersion = 10.0.40219.1
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "KuduRest", "Src\KuduRest.fsproj", "{3A782696-FED9-4511-9F3F-3AD62CC004E6}"
+# Visual Studio 15
+VisualStudioVersion = 15.0.26124.0
+MinimumVisualStudioVersion = 15.0.26124.0
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "KuduRest", "src\KuduRest.fsproj", "{3A782696-FED9-4511-9F3F-3AD62CC004E6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".appveyor", ".appveyor", "{F3F10687-0C83-4F6C-9703-C9851E428EB6}"
+	ProjectSection(SolutionItems) = preProject
+		appveyor.yml = appveyor.yml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".docs", ".docs", "{99F3AF2D-6999-44A9-ADCE-42B1E50B6472}"
+	ProjectSection(SolutionItems) = preProject
+		LICENSE = LICENSE
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".git", ".git", "{9329F281-2DB5-44DD-B02C-7BF712795A8F}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
 		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{3A782696-FED9-4511-9F3F-3AD62CC004E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{3A782696-FED9-4511-9F3F-3AD62CC004E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A782696-FED9-4511-9F3F-3AD62CC004E6}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{3A782696-FED9-4511-9F3F-3AD62CC004E6}.Debug|x64.Build.0 = Debug|Any CPU
+		{3A782696-FED9-4511-9F3F-3AD62CC004E6}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{3A782696-FED9-4511-9F3F-3AD62CC004E6}.Debug|x86.Build.0 = Debug|Any CPU
 		{3A782696-FED9-4511-9F3F-3AD62CC004E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3A782696-FED9-4511-9F3F-3AD62CC004E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A782696-FED9-4511-9F3F-3AD62CC004E6}.Release|x64.ActiveCfg = Release|Any CPU
+		{3A782696-FED9-4511-9F3F-3AD62CC004E6}.Release|x64.Build.0 = Release|Any CPU
+		{3A782696-FED9-4511-9F3F-3AD62CC004E6}.Release|x86.ActiveCfg = Release|Any CPU
+		{3A782696-FED9-4511-9F3F-3AD62CC004E6}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {44B79328-D9AA-45FA-8A9D-A357D8323637}
 	EndGlobalSection
 EndGlobal

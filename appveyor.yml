@@ -6,13 +6,6 @@ branches:
 
 skip_tags: true
 
-assembly_info:
-  patch: true
-  file: AssemblyInfo.*
-  assembly_version: "1.0.{build}"
-  assembly_file_version: "{version}"
-  assembly_informational_version: "{version}"
-
 configuration: Release
 
 build:
@@ -25,20 +18,3 @@ build:
 artifacts:
   - path: src\bin\$(configuration)\KuduRest.dll
   - path: src\bin\$(configuration)\KuduRest.pdb
-
-deploy:
-  - provider: GitHub
-    release: KuduRest-v$(appveyor_build_version)
-    auth_token:
-      secure: AKvncEaWXvKGoLiiYaxf3NvS+ZIlExjXhc9hugLtkig2sot+nSYrxN15M8IjkN3A
-    artifact: /.*\.(dll|pdb|nupkg)/
-    draft: false
-    prerelease: false
-    on:
-      branch: master
-
-  - provider: NuGet
-    api_key:
-      secure: 7P96yE00N93in9FNrs27qaIS7Pqu+UJMHjXBNXPIK8RIcVbsm03fGAAGPCd47GRL
-    skip_symbols: false
-    artifact: /.*\.nupkg/
